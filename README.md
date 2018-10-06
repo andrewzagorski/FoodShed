@@ -1,5 +1,7 @@
 # FoodShed Project
 
+Please read CONTRIBUTING for project contribution guidelines!
+
 ## Tech used:
 - Ionic Framework 3
 - TypeScript
