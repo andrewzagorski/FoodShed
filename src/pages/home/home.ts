@@ -18,8 +18,8 @@ export class HomePage {
     mapboxgl.accessToken = 'pk.eyJ1IjoiYWVjaGFuIiwiYSI6ImNqbXd4ZmYzYTA0eWcza3J0NzVsNnNkcWoifQ.PQuBcFIs9STCQ6uf8DrJNw';
     var map = new mapboxgl.Map({
       style: 'mapbox://styles/aechan/cjmwxodn95lir2rmoq60ydb3m',
-      center: [43.0766, 89.4125],
-      zoom: 16,
+      center: [-89.4125, 43.0766],
+      zoom: 15,
       pitch: 0,
       minZoom: 1, //restrict map zoom - buildings not visible beyond 13
       maxZoom: 17,
