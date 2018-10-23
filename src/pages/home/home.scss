@@ -3,4 +3,17 @@ page-home {
       width: 100%;
       height:100%;
      }
+  #marker {
+      background-image: url('https://i.imgur.com/MK4NUzI.png');
+      // background-image: url('file:../../../resources/map-marker.png');    //Don't know why it doesn't work. Find these icon at https://www.flaticon.com/free-icon/map-marker_25613
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+  }   
+
+  .mapboxgl-popup {
+    max-width: 200px;
+  }
 }
