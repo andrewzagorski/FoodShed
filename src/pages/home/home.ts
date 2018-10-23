@@ -19,11 +19,7 @@ export class HomePage {
     var map = new mapboxgl.Map({
       style: 'mapbox://styles/aechan/cjmwxodn95lir2rmoq60ydb3m',
       center: [-89.4125, 43.0766],
-<<<<<<< HEAD
-      zoom: 16,
-=======
       zoom: 15,
->>>>>>> dev-Kenny
       pitch: 0,
       minZoom: 1, //restrict map zoom - buildings not visible beyond 13
       maxZoom: 17,
