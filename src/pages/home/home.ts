@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
+import { MapData } from './MapData';
 
 @Component({
   selector: 'page-home',

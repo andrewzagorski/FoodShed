@@ -1,7 +1,6 @@
 import GoogleSpreadsheet from 'google-spreadsheet';
-const credentials = require('../../service-account.json');
-const spreadsheetID = '12uplyLstGU8m5404Xj_q2RbyVBnuOcIbP1ZgZYvEA_o';
-
+const SPREADSHEETID = '12uplyLstGU8m5404Xj_q2RbyVBnuOcIbP1ZgZYvEA_o';
+const WORKBOOKINDEX = 1;
 export class MapData {
     private longlat: Array<number>;
     private name: string;
@@ -25,19 +24,21 @@ export class MapData {
         this.status = status;
     }
 
-    public static async retrieveMapData(): Array<MapData> {
-
+    public static async retrieveMapData(): Promise<Array<MapData>> {
+        return null;
     }
 
     private static async accessSpreadsheet() {
-        const doc = new GoogleSpreadsheet(SPREADSHEET_ID)
-        await promisify(doc.useServiceAccountAuth)(creds)
-        const info = await promisify(doc.getInfo)()
-        console.log(`Loaded doc: ` + info.title + ` by ` + info.author.email)
-        const sheet = info.worksheets[0]
-        console.log(
-            `sheet 1: ` + sheet.title + ` ` + sheet.rowCount + `x` + sheet.colCount
-        )
+        const doc = new GoogleSpreadsheet(SPREADSHEETID);
+
+        // get the column containing location names
+        // returns an array of cell data
+        const locNames = await doc.getCells(WORKBOOKINDEX, {
+           // min-row: 1,
+            
+        });
+
+        const statuses = await doc.
     }
 
 }
