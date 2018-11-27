@@ -89,14 +89,16 @@ export class HomePage {
     // };
 
 
-    var geojson;
     // this function works correctly. It can get correct format geojson. But I dont get the asynchronous things
-
+    
     // TODO now it can get correct-formated geojson. But the following foreach will run before it download the data, and output "geojson undefined" error
+    
+    var geojson;
     var url = 'https://script.google.com/macros/s/AKfycbx9F0ORXrp-IiX0t7LmRxVyeKEk57Vu3wVrsbl_uzfkLGhfGh8/exec'
     request.get(url, function (error, response, body) {
       geojson = JSON.parse(body);
-    })  
+    // })  //change it to line 117 
+  
 
     // add markers to map
     geojson.features.forEach(function (marker) {
@@ -109,10 +111,12 @@ export class HomePage {
       new mapboxgl.Marker(el)
         .setLngLat(marker.geometry.coordinates)
         .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-          .setHTML('<h3>' + marker.properties.title + '</h3><p><div align="center">' + marker.properties.description + '</div></p>'))
+          .setHTML('<h3>' + marker.properties.title + '</h3><p><div align="center">' + (marker.properties.description?"stocked":"empty") + '</div></p>'))
         .addTo(map);
     });
-
+    })
+    
+   
   }
 
 }
