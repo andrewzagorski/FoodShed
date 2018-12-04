@@ -27,14 +27,14 @@ export class HomePage {
       container: 'map'
     });
 
-    var url = 'https://script.google.com/macros/s/AKfycbx9F0ORXrp-IiX0t7LmRxVyeKEk57Vu3wVrsbl_uzfkLGhfGh8/exec'
-    rp.get(url, function (error, response, body) {
+    var url = 'https://script.google.com/macros/s/AKfycbxGZ9kAERX_j5d16pSNKXPfMpZ5HGNloqQHB58riPYWxUZL-pA/exec'
+    rp.get(url, (error, response, body) => {
       return body;
     })
     // add markers to map
     .then((body) => {
       let geojson = JSON.parse(body)
-      geojson.features.forEach(function (marker) {
+      geojson.features.forEach((marker) => {
 
         // create a HTML element for each feature
         var el = document.createElement('div');
