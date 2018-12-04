@@ -39,6 +39,8 @@
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "mapbox-gl": "^0.50.0-beta.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.26"
